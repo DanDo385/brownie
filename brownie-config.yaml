@@ -1,0 +1,20 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.7.3
+  - smartcontractkit/chainlink@2.10.0
+
+compiler:
+  solc:
+    version: 0.8.20
+    optimizer:
+      enabled: true
+      runs: 200
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@3.4.0"
+      - "@chainlink=smartcontractkit/chainlink@2.10.0"
+
+networks:
+  default: development
+
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
